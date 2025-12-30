@@ -39,34 +39,63 @@
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(4px);
             padding: 48px;
-            border-radius: 16px;
+            border-radius: 24px;
             border: 1px solid var(--border);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-            max-width: 480px;
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
+            max-width: 520px;
+            position: relative;
         }
 
         .brand { 
             font-weight: 800; 
             color: var(--primary); 
-            font-size: 1.25rem; 
-            margin-bottom: 40px; 
-            letter-spacing: -0.02em;
+            font-size: 1.1rem; 
+            margin-bottom: 30px; 
+            letter-spacing: 0.1em;
             text-transform: uppercase;
         }
 
+        .ooops-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: -15px;
+        }
+
+        .ooops {
+            font-size: 3.25rem;
+            font-weight: 800;
+            color: var(--accent);
+            transform: rotate(-3deg);
+            display: inline-block;
+        }
+
+        .sad-face {
+            font-size: 2.5rem;
+            display: inline-block;
+            animation: sway 3s ease-in-out infinite;
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+
         .error-code { 
-            font-size: 6rem; 
+            font-size: 7rem; 
             font-weight: 900; 
             color: var(--secondary); 
             margin: 0; 
             line-height: 1;
             letter-spacing: -0.05em;
+            user-select: none;
         }
 
         h1 { 
             font-size: 1.75rem; 
             font-weight: 800;
-            margin: -10px 0 16px 0; 
+            margin: -5px 0 16px 0; 
             color: var(--primary);
         }
 
@@ -81,11 +110,12 @@
             display: none;
             padding: 12px;
             background: var(--secondary);
-            border-radius: 6px;
+            border-radius: 8px;
             font-size: 0.85rem;
             margin-bottom: 24px;
             color: var(--primary);
-            font-weight: 500;
+            font-weight: 600;
+            border-left: 4px solid var(--accent);
         }
 
         .btn-group {
@@ -134,12 +164,18 @@
 <body>
     <div class="card">
         <div class="brand">QiAlly</div>
+        
+        <div class="ooops-container">
+            <div class="ooops">Ooops...!</div>
+            <div class="sad-face">😟</div>
+        </div>
         <div class="error-code">404</div>
+        
         <h1 id="error-title">Path Discrepancy</h1>
-        <p id="error-message">The system cannot locate the resource or profile matching this request. This usually occurs if a link is mistyped, expired, or has been re-indexed.</p>
+        <p id="error-message">The system cannot locate the resource or profile matching this request. This usually occurs if a link is mistyped, expired, or re-indexed.</p>
         
         <div id="dynamic-note">
-            Note: If you are an authorized client, please ensure your QID-slug is correct.
+            Note: If you are an authorized client, please verify your QID-slug or check your latest SMS.
         </div>
 
         <div class="btn-group">
