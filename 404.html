@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Profile Not Found | QiAlly</title>
+    <style>
+        :root {
+            --primary: #003580;
+            --secondary: #f0f4f8;
+            --text: #1a1a1a;
+            --accent: #006ce4;
+            --border: #d1d5db;
+        }
+        * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        
+        body { 
+            background-color: #fff; 
+            /* Subtle data-grid background for "Systems" aesthetic */
+            background-image: radial-gradient(var(--border) 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            color: var(--text); 
+            margin: 0; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            text-align: center; 
+            padding: 24px;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(4px);
+            padding: 48px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            max-width: 480px;
+        }
+
+        .brand { 
+            font-weight: 800; 
+            color: var(--primary); 
+            font-size: 1.25rem; 
+            margin-bottom: 40px; 
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+        }
+
+        .error-code { 
+            font-size: 6rem; 
+            font-weight: 900; 
+            color: var(--secondary); 
+            margin: 0; 
+            line-height: 1;
+            letter-spacing: -0.05em;
+        }
+
+        h1 { 
+            font-size: 1.75rem; 
+            font-weight: 800;
+            margin: -10px 0 16px 0; 
+            color: var(--primary);
+        }
+
+        p { 
+            color: #555; 
+            margin-bottom: 32px; 
+            line-height: 1.6; 
+            font-size: 1rem;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn { 
+            background: var(--primary); 
+            color: white; 
+            text-decoration: none; 
+            padding: 14px 28px; 
+            border-radius: 8px; 
+            font-weight: 600; 
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .btn:hover { 
+            background: var(--accent); 
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 53, 128, 0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary);
+            color: var(--primary);
+            box-shadow: none;
+        }
+
+        .footer-note {
+            margin-top: 40px;
+            font-size: 0.75rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="brand">QiAlly</div>
+        <div class="error-code">404</div>
+        <h1>Path Mismatch</h1>
+        <p>The system could not locate a profile matching this ID. This usually occurs if a link has expired or if the QID has been re-indexed.</p>
+        
+        <div class="btn-group">
+            <a href="https://qially.com" class="btn">Return to QiAlly.com</a>
+            <a href="mailto:cody@qially.com?subject=Portal Access Support" class="btn btn-outline">Contact Support</a>
+        </div>
+
+        <div class="footer-note">Systems Whisperer | Precision Operations</div>
+    </div>
+</body>
+</html>
