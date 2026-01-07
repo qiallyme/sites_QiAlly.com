@@ -1,0 +1,8 @@
+[[Form I-485, Application to Register Permanent Residence or Adjust Status.pdf]]
+[[Form I-693, Report of Immigration Medical Examination and Vaccination Record.pdf]]
+[[allegaracasa.jpg]]
+[[astrotext.png]]
+[[5_Apps/5.0_QiApps/1_apps/subs/portfolio.qially.com/public/images/index]]
+[[llegaracasa.jpg]]
+[[5_Apps/5.30_live/QiSite/qially-com/subs/portfolio.qially.com/public/images/logo.png]]
+[[profile.jpg]]

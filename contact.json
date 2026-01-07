@@ -1,12 +1,60 @@
 {
   "contact": {
-    "title": "Start a Request",
-    "subtitle": "All requests are handled asynchronously to ensure accuracy and focus.",
-    "response_time": "Reviewed within 48 business hours",
-    "instructions": "Please provide as much detail as possible. Follow-ups via SMS are not supported.",
-    "channels": {
-      "primary": "Embedded intake form",
-      "assistant": "On-site AI assistant"
+    "title": "Get In Touch",
+    "description": "Ready to transform your business operations? Let's discuss your project and how we can help streamline your workflow.",
+    "email": "cody@qially.com",
+    "phone": "+1 (317) 643-3489",
+    "location": "Remote / Global",
+    "availability": "Daily, 12:00 PM - 7:00 PM",
+    "form": {
+      "title": "Start Your Project",
+      "description": "Tell us about your business needs and we'll get back to you within 24 hours.",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "type": "email",
+          "required": true
+        },
+        {
+          "name": "company",
+          "label": "Company",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "projectType",
+          "label": "Project Type",
+          "type": "select",
+          "options": [
+            "Business Automation",
+            "Web Development",
+            "Knowledge Management",
+            "Client Portal",
+            "Not Sure / Consultation"
+          ],
+          "required": true
+        },
+        {
+          "name": "message",
+          "label": "Tell us about your project",
+          "type": "textarea",
+          "required": true
+        }
+      ]
+    },
+    "social": {
+      "github": "https://github.com/qiallyme",
+      "linkedin_company": "https://www.linkedin.com/company/qially/?viewAsMember=true",
+      "linkedin_personal": "https://www.linkedin.com/in/cody-rice-velasquez-qially/",
+      "twitter": "https://twitter.com/qiallyme"
     }
   }
 }
+

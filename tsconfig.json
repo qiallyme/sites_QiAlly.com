@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["src", "vite-env.d.ts"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@content/*": ["./src/content/*"],
+      "@data/*": ["./src/data/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@qially/ui/*": ["../../2_modules/ui-react/*"],
+      "@qially/ui-react/*": ["../../2_modules/ui-react/*"],
+      "@qially/lib/*": ["../../2_modules/lib/*"]
+    }
+  },
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
+

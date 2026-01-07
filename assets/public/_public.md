@@ -1,6 +1,0 @@
-[[favicon.webp]]
-[[5_Apps/5.0_QiApps/1_apps/subs/portfolio.qially.com/public/files/index]]
-[[5_Apps/5.0_QiApps/1_apps/subs/portfolio.qially.com/public/images/index]]
-[[5_Apps/5.0_QiApps/1_apps/subs/portfolio.qially.com/public/index]]
-[[robots.txt]]
-[[sitemap.xml]]

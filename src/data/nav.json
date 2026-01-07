@@ -1,0 +1,34 @@
+{
+  "header": [
+    { "label": "Services", "href": "/services" },
+    { "label": "Pricing", "href": "/pricing" },
+    { "label": "Case Studies", "href": "/case-studies" },
+    { "label": "Portfolio", "href": "/portfolio" },
+    { "label": "Blog", "href": "/blog" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "footer": {
+    "company": [
+      { "label": "About", "href": "/about" },
+      { "label": "Services", "href": "/services" },
+      { "label": "Testimonials", "href": "/testimonials" }
+    ],
+    "resources": [
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Case Studies", "href": "/case-studies" },
+      { "label": "Knowledge Vault", "href": "https://vault.qially.com" }
+    ],
+    "legal": [
+      { "label": "Privacy Policy", "href": "/privacy" },
+      { "label": "Terms of Service", "href": "/terms" }
+    ],
+    "portals": [
+      { "label": "713 Series", "href": "https://713.qially.me" },
+      { "label": "Portfolio", "href": "https://portfolio.qially.com" },
+      { "label": "QiVault", "href": "https://vault.qially.com" },
+      { "label": "Client Portal", "href": "https://portal.qially.com" },
+      { "label": "Empower Q Now", "href": "https://empowerqnow.com" }
+    ]
+  }
+}
+

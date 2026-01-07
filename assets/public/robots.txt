@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-
-# Sitemap
-Sitemap: https://codyrv.site/sitemap.xml
-
-# Prevent indexing of sensitive routes
-Disallow: /api/
-Disallow: /admin/

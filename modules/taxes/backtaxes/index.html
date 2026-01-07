@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back Tax Review & Prep Deals | Qially</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --qially-navy: #0d1b2a;
+            --qially-blue: #007bff;
+            --qially-text: #1f2937;
+            --qially-light: #f9fafb;
+            --qially-border: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--qially-text);
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Matches the 404 Hero Styling */
+        .hero {
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--qially-navy);
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Deal Cards */
+        .deal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 50px;
+        }
+
+        .deal-card {
+            background: var(--qially-light);
+            border: 1px solid var(--qially-border);
+            border-radius: 16px;
+            padding: 32px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-align: left;
+        }
+
+        .deal-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        .deal-card h3 {
+            font-size: 1.5rem;
+            color: var(--qially-navy);
+            margin-top: 0;
+        }
+
+        .deal-card .price-tag {
+            display: inline-block;
+            background: #dcfce7;
+            color: #166534;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .deal-card ul {
+            padding: 0;
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .deal-card ul li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .deal-card ul li::before {
+            content: "✓";
+            color: var(--qially-blue);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Primary Button Style */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--qially-blue);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        .secondary-text {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px;
+            border-top: 1px solid var(--qially-border);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Back Taxes Resolved. For Less.</h1>
+            <p>Stop the stress of unfiled returns. Qially provides expert review and preparation deals designed to fit your budget.</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="deal-grid">
+            <div class="deal-card">
+                <span class="price-tag">Most Popular</span>
+                <h3>The Fresh Start Review</h3>
+                <p>Perfect for those 1-2 years behind who need a clean slate quickly.</p>
+                <ul>
+                    <li>Full Prior-Year Document Audit</li>
+                    <li>Missed Deduction Recovery</li>
+                    <li>Electronic Filing Included</li>
+                </ul>
+                <a href="#" class="cta-button">Get Started</a>
+            </div>
+
+            <div class="deal-card">
+                <span class="price-tag">Best Value</span>
+                <h3>Multi-Year Bundle</h3>
+                <p>Deeply discounted rates for those filing 3 or more years of back taxes.</p>
+                <ul>
+                    <li>IRS Transcript Retrieval</li>
+                    <li>Penalty Abatement Check</li>
+                    <li>Bulk Filing Discount</li>
+                </ul>
+                <a href="#" class="cta-button">Claim Deal</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="secondary-text">
+        <div class="container">
+            <h3>Why Qially?</h3>
+            <p style="max-width: 700px; margin: 0 auto; color: #6b7280;">
+                We use proprietary review technology to scan your past returns for errors that cost you money. 
+                Our goal is simple: <strong>Decrease what you owe, and decrease what you pay for prep.</strong>
+            </p>
+            <br>
+            <a href="https://qially.com" style="color: var(--qially-blue); text-decoration: none; font-weight: 600;">← Back to Qially Home</a>
+        </div>
+    </section>
+
+</body>
+</html>
