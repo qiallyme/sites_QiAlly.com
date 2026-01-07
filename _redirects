@@ -1,11 +1,39 @@
 # Cloudflare Pages Redirects
 # Format: source destination statusCode
 
-/portal        https://myhub.qially.com     301
-/cockpit       https://cockpit.qially.com   301
-/vault         https://vault.qially.com     301
-/empower       https://empowerqnow.qially.com 301
+# --- Subdomain / External Redirects ---
+/tax99         https://tax99.qially.com       301
+/bptracker     https://bptracker.qially.com   301
+/helpcody      https://helpcody.qially.com    301
+/client        https://client.qially.com      301
+/portal        https://client.qially.com      301
+/lyft          https://lyft.qially.com        301
+/confirm       https://confirm.qially.com     301
+/carewiki      https://carewiki.qially.com    301
+/energy        https://energy.qially.me       301
+/silence       https://silenceisntdistance.qially.com 301
+/bonus         https://bonus.qially.com       301
+/cody          https://cody.qially.com        301
+/builtbyrays   https://builtbyrays.qially.com 301
+/rosalucas     https://rosalucas.qially.com   301
+/journal       https://journal.qially.com     301
+/msil          https://msil-proposal.qially.com 301
+/portfolio-ext https://portfolio.qially.com   301
+/solistires    https://solistires.qially.com  301
+/drivetest     https://drivetest.qially.com   301
+/vault         https://vault.qially.com       301
+/mirrors       https://mirrorsbetweenus.qistory.qially.com 301
+/timeline      https://timeline.qially.me     301
+/713           https://713.qially.me          301
 
-# SPA fallback - must be last
+# --- Internal Restructuring Redirects (Old -> New) ---
+/taxes/*       /modules/taxes/:splat          301
+/individual/*  /modules/taxes/individual/:splat 301
+/hr-ops/*      /modules/hr-ops/:splat         301
+/it-ai/*       /modules/it-ai/:splat          301
+/services/     /pages/services/               301
+/privacy.html  /pages/privacy/                301
+/service-agreement/ /pages/msa/               301
+
+# --- SPA / Fallback ---
 /*    /index.html   200
-

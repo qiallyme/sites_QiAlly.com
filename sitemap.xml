@@ -6,32 +6,47 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://qially.com/taxes/</loc>
+    <loc>https://qially.com/pages/services/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://qially.com/modules/taxes/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qially.com/hr-ops/</loc>
+    <loc>https://qially.com/modules/taxes/individual/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qially.com/it-ai/</loc>
+    <loc>https://qially.com/modules/hr-ops/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qially.com/individual/</loc>
+    <loc>https://qially.com/modules/it-ai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qially.com/privacy.html</loc>
+    <loc>https://qially.com/pages/portfolio/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qially.com/pages/showcases/videos.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qially.com/pages/privacy/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://qially.com/service-agreement/</loc>
+    <loc>https://qially.com/pages/msa/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>

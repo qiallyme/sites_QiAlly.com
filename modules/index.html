@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules | QiAlly</title>
+    <link rel="icon" type="image/png" href="/assets/imgs/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] },
+                    colors: { 'brand-bg': '#f8fafc' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased relative">
+    <nav x-data="{ open: false }" class="fixed w-full z-50 top-0 bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="/index.html" class="font-serif text-2xl font-bold tracking-tight text-slate-900">
+                    Qi<span class="text-blue-600 font-light italic">Ally</span>
+                </a>
+                 <div class="hidden md:flex space-x-8 items-center">
+                     <a href="/pages/services/" class="text-sm font-medium text-slate-600 hover:text-blue-600">Services</a>
+                     <a href="/index.html#contact" class="px-5 py-2.5 rounded-full bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 transition">Contact</a>
+                 </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-12 px-6 bg-slate-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl font-serif text-slate-900 mb-6">Service Modules</h1>
+            <p class="text-xl text-slate-500 font-light">
+                Specialized functional areas for your business.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="/modules/hr-ops/" class="block p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100 group">
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition mb-2">HR & Ops</h3>
+                <p class="text-slate-500 text-sm">Talent acquisition, compliance, and operational scaling.</p>
+            </a>
+            
+             <a href="/modules/taxes/" class="block p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100 group">
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition mb-2">Tax & Accounts</h3>
+                <p class="text-slate-500 text-sm">Business tax resolution and accounting cleanup.</p>
+            </a>
+
+            <a href="/modules/taxes/individual/" class="block p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100 group">
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition mb-2">Individual Services</h3>
+                <p class="text-slate-500 text-sm">Immigration, personal docs, and individual tax prep.</p>
+            </a>
+            
+            <a href="/modules/it-ai/" class="block p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100 group">
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition mb-2">IT & AI Consulting</h3>
+                <p class="text-slate-500 text-sm">Automation, RAG systems, and tech stack optimization.</p>
+            </a>
+
+             <a href="/modules/qisuite/" class="block p-8 bg-slate-900 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-800 group">
+                <h3 class="text-xl font-bold text-white mb-2">QiAlly 360</h3>
+                <p class="text-slate-400 text-sm">Comprehensive managed services suite.</p>
+            </a>
+        </div>
+    </main>
+    
+    <footer class="text-center py-8 text-slate-400 text-xs border-t border-slate-200">
+        &copy; 2025 QiAlly LLC.
+    </footer>
+</body>
+</html>

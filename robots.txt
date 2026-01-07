@@ -1,7 +1,6 @@
-# robots.txt for qially.com
 User-agent: *
 Allow: /
-
-Disallow: /admin/
-
+Disallow: /assets/files/
+Disallow: /assets/css/
+Disallow: /assets/js/
 Sitemap: https://qially.com/sitemap.xml
