@@ -1,1 +1,202 @@
-https://github.com/qiallyme/sites_QiAlly.com/blob/main/pages/ecard/index.html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QiAlly | Cody Rice-Velasquez</title>
+  <meta name="description" content="Save Cody’s contact card and send a request." />
+  <link rel="canonical" href="https://qially.com/cody/" />
+  <link rel="icon" type="image/png" href="/assets/imgs/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter','sans-serif'], serif: ['Playfair Display','serif'] },
+          colors: {
+            'brand-bg': '#f8fafc',
+            'glass-border': 'rgba(255, 255, 255, 0.5)',
+            'glass-bg': 'rgba(255, 255, 255, 0.7)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .blob-bg{
+      position:fixed; inset:0; z-index:-1;
+      background:
+        radial-gradient(circle at 15% 50%, rgba(219,234,254,.5), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(233,213,255,.5), transparent 25%);
+      filter: blur(40px);
+    }
+    .glass-card{
+      background: rgba(255,255,255,.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,.5);
+      box-shadow: 0 4px 30px rgba(0,0,0,.05);
+    }
+    .headshot-frame{
+      border-radius: 26px;
+      padding: 3px;
+      background: linear-gradient(135deg,
+        rgba(37, 99, 235, .55),
+        rgba(99, 102, 241, .25),
+        rgba(255, 255, 255, .35)
+      );
+      box-shadow: 0 18px 45px rgba(15,23,42,.18);
+    }
+    .headshot-frame img{
+      display:block;
+      border-radius: 23px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: #fff;
+      border: 1px solid rgba(255,255,255,.65);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased relative selection:bg-blue-100 selection:text-blue-900">
+  <div class="blob-bg"></div>
+
+  <!-- Minimal nav (matches your site vibe, less clutter on mobile) -->
+  <nav x-data="{ open: false }"
+       class="fixed w-full z-50 top-0 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-white/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <a href="/" class="font-serif text-xl font-bold tracking-tight text-slate-900">
+          Qi<span class="text-blue-600 font-light italic">Ally</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-3">
+          <a href="/#contact" class="px-5 py-2.5 rounded-full bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 transition shadow-lg shadow-slate-200">
+            Send Request
+          </a>
+        </div>
+
+        <div class="md:hidden flex items-center">
+          <button @click="open = !open" class="text-slate-600 hover:text-slate-900 focus:outline-none">
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div x-show="open" class="md:hidden bg-white border-b border-slate-100"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 -translate-y-2"
+         x-transition:enter-end="opacity-100 translate-y-0">
+      <div class="px-4 pt-2 pb-4 space-y-1">
+        <a href="/#contact" class="block px-3 py-2 text-base font-medium text-slate-900 hover:bg-slate-50 rounded-md">Send Request</a>
+        <a href="/" class="block px-3 py-2 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-blue-600 rounded-md">Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ONE COLUMN, MOBILE FIRST -->
+  <main class="pt-24 pb-10">
+    <div class="max-w-md mx-auto px-4">
+      <section class="glass-card rounded-2xl p-4 sm:p-6">
+        <!-- Headshot + Name -->
+        <div class="flex flex-col items-center text-center">
+          <div class="headshot-frame w-28 h-36 sm:w-32 sm:h-40">
+            <!-- IMPORTANT: must be a web path -->
+            <img src="/assets/imgs/profile.png" alt="Cody Rice-Velasquez">
+          </div>
+
+          <h1 class="mt-4 text-2xl sm:text-3xl font-serif font-medium text-slate-900 leading-tight">
+            Cody Rice-Velasquez
+          </h1>
+          <p class="mt-1 text-sm sm:text-base text-slate-500 font-light">
+            Business Operations & Systems Consultant
+          </p>
+
+          <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+            Orchestrating chaos into clarity: tax resolution, accounting cleanup, and structured systems with practical AI support.
+          </p>
+        </div>
+
+        <!-- Primary actions -->
+        <div class="mt-4 grid gap-2">
+          <a href="./cody.vcf"
+             class="w-full px-5 py-3 rounded-full bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 transition shadow-lg shadow-slate-200 inline-flex items-center justify-center gap-2"
+             download>
+            <i class="fa-solid fa-address-card"></i>
+            Save Contact
+          </a>
+
+          <a href="/#contact"
+             class="w-full glass-card px-5 py-3 rounded-full text-slate-900 text-sm font-medium hover:bg-white transition inline-flex items-center justify-center gap-2">
+            <i class="fa-solid fa-paper-plane text-blue-600"></i>
+            Send Request
+          </a>
+        </div>
+
+        <!-- Contact buttons -->
+        <div class="mt-4 grid gap-2">
+          <a href="tel:+13172054383"
+             class="w-full glass-card px-5 py-3 rounded-full text-slate-900 text-sm font-medium hover:bg-white transition inline-flex items-center justify-center gap-2">
+            <i class="fa-solid fa-phone text-blue-600"></i>
+            Call: (317) 205-4383
+          </a>
+
+          <a href="mailto:cody@qially.com"
+             class="w-full glass-card px-5 py-3 rounded-full text-slate-900 text-sm font-medium hover:bg-white transition inline-flex items-center justify-center gap-2">
+            <i class="fa-solid fa-envelope text-blue-600"></i>
+            Email: cody@qially.com
+          </a>
+
+          <a href="mailto:crice4485@gmail.com?subject=QiAlly%20Emergency%20Backup%20Contact"
+             class="w-full glass-card px-5 py-3 rounded-full text-slate-900 text-sm font-medium hover:bg-white transition inline-flex items-center justify-center gap-2">
+            <i class="fa-solid fa-triangle-exclamation text-amber-600"></i>
+            Backup Email (Emergency)
+          </a>
+        </div>
+
+        <!-- Social / presence buttons -->
+        <div class="mt-4 grid gap-2">
+          <a href="https://www.youtube.com/@qiallysystems" target="_blank" rel="noopener"
+             class="w-full glass-card px-5 py-3 rounded-full text-slate-900 text-sm font-medium hover:bg-white transition inline-flex items-center justify-center gap-2">
+            <i class="fa-brands fa-youtube text-red-600"></i>
+            YouTube
+          </a>
+
+          <a href="https://www.linkedin.com/company/qially/" target="_blank" rel="noopener"
+             class="w-full glass-card px-5 py-3 rounded-full text-slate-900 text-sm font-medium hover:bg-white transition inline-flex items-center justify-center gap-2">
+            <i class="fa-brands fa-linkedin text-blue-600"></i>
+            LinkedIn
+          </a>
+
+          <a href="https://maps.app.goo.gl/d1YPzr2wPMhX6aMo9" target="_blank" rel="noopener"
+             class="w-full glass-card px-5 py-3 rounded-full text-slate-900 text-sm font-medium hover:bg-white transition inline-flex items-center justify-center gap-2">
+            <i class="fa-solid fa-location-dot text-indigo-600"></i>
+            Location / Directions
+          </a>
+        </div>
+
+        <p class="mt-4 text-xs text-slate-500 text-center">
+          Tip: Save the contact first. The request form is always one tap away.
+        </p>
+      </section>
+
+      <div class="text-center mt-6">
+        <a href="/" class="text-sm text-slate-500 hover:text-blue-600 transition inline-flex items-center gap-2">
+          <i class="fa-solid fa-arrow-left"></i> Back to QiAlly
+        </a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
