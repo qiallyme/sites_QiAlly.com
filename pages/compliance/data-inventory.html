@@ -1,1 +1,56 @@
-Where PII is stored
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Inventory | Qially LLC</title>
+    <style>
+        body { font-family: sans-serif; padding: 40px; color: #444; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f8f9fa; }
+        .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #3498db; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Hub</a>
+    <h1>Customer Information Inventory</h1>
+    <p>This table identifies all locations where PII (Personally Identifiable Information) is processed.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Data Asset/System</th>
+                <th>Data Type</th>
+                <th>Storage Location</th>
+                <th>Encryption Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>QiVault / Client Portal</td>
+                <td>SSNs, Tax Docs, Bank Info</td>
+                <td>Cloud (AWS/Azure)</td>
+                <td>AES-256 / Encrypted at Rest</td>
+            </tr>
+            <tr>
+                <td>Tax Prep Software</td>
+                <td>Tax Returns, E-file info</td>
+                <td>SaaS (Vendor Managed)</td>
+                <td>MFA Enabled / TLS 1.3</td>
+            </tr>
+            <tr>
+                <td>Local Hardware (Laptops)</td>
+                <td>Temporary working files</td>
+                <td>BitLocker/FileVault</td>
+                <td>Full Disk Encryption</td>
+            </tr>
+            <tr>
+                <td>Email (Google/O365)</td>
+                <td>Client Communications</td>
+                <td>Cloud</td>
+                <td>TLS / Forced MFA</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
