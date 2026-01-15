@@ -1,33 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <title>Risk Assessment | Qially LLC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Assessment | Compliance Hub</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] } } }
+        }
+    </script>
     <style>
-        body { font-family: sans-serif; padding: 40px; max-width: 800px; margin: auto; }
-        .risk-item { margin-bottom: 30px; padding: 15px; border-left: 5px solid #e74c3c; background: #fdf2f2; }
-        .mitigation { color: #27ae60; font-weight: bold; margin-top: 10px; }
+        .blob-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; background: radial-gradient(circle at 15% 50%, rgba(219, 234, 254, 0.5), transparent 25%), radial-gradient(circle at 85% 30%, rgba(233, 213, 255, 0.5), transparent 25%); filter: blur(40px); }
+        .glass-card { background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.5); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); }
     </style>
 </head>
-<body>
-    <h1>Security Risk Assessment 2026</h1>
-    
-    <div class="risk-item">
-        <strong>Risk: Phishing/Social Engineering</strong>
-        <p>Unauthorized access to employee credentials via email spoofing.</p>
-        <div class="mitigation">Mitigation: Mandatory 2FA/MFA on all platforms & Security Awareness Training.</div>
+<body class="bg-slate-50 text-slate-800 antialiased relative">
+    <div class="blob-bg"></div>
+    <nav></nav>
+
+    <div class="pt-32 pb-12 px-6 max-w-4xl mx-auto">
+        <a href="index.html" class="inline-flex items-center text-sm text-slate-500 hover:text-blue-600 mb-8 transition"><i class="fa-solid fa-arrow-left mr-2"></i> Back to Compliance Hub</a>
+        
+        <h1 class="text-3xl font-serif text-slate-900 mb-8 text-center">Security Risk Assessment 2026</h1>
+        
+        <div class="space-y-6">
+            
+            <div class="glass-card p-6 rounded-xl border-l-[6px] border-l-red-500">
+                <div class="flex items-start gap-4">
+                    <div class="pt-1"><i class="fa-solid fa-triangle-exclamation text-red-500 text-xl"></i></div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Risk: Phishing/Social Engineering</h3>
+                        <p class="text-slate-600 text-sm mb-3">Unauthorized access to employee credentials via email spoofing.</p>
+                        <div class="text-sm font-semibold text-emerald-600 bg-emerald-50 inline-block px-3 py-1 rounded">
+                            <i class="fa-solid fa-shield-halved mr-1"></i> Mitigation: Mandatory 2FA/MFA on all platforms & Security Awareness Training.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-xl border-l-[6px] border-l-red-500">
+                <div class="flex items-start gap-4">
+                    <div class="pt-1"><i class="fa-solid fa-laptop text-red-500 text-xl"></i></div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Risk: Unauthorized Device Access</h3>
+                        <p class="text-slate-600 text-sm mb-3">Physical theft or loss of a laptop containing client data.</p>
+                        <div class="text-sm font-semibold text-emerald-600 bg-emerald-50 inline-block px-3 py-1 rounded">
+                            <i class="fa-solid fa-shield-halved mr-1"></i> Mitigation: Full Disk Encryption and Remote Wipe capabilities enabled.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-xl border-l-[6px] border-l-amber-500">
+                <div class="flex items-start gap-4">
+                    <div class="pt-1"><i class="fa-solid fa-cloud text-amber-500 text-xl"></i></div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Risk: Vendor Breach</h3>
+                        <p class="text-slate-600 text-sm mb-3">Third-party software vulnerability (e.g., Cloud storage leak).</p>
+                        <div class="text-sm font-semibold text-emerald-600 bg-emerald-50 inline-block px-3 py-1 rounded">
+                            <i class="fa-solid fa-shield-halved mr-1"></i> Mitigation: Annual review of SOC2 Type II reports for all major vendors.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    <div class="risk-item">
-        <strong>Risk: Unauthorized Device Access</strong>
-        <p>Physical theft or loss of a laptop containing client data.</p>
-        <div class="mitigation">Mitigation: Full Disk Encryption and Remote Wipe capabilities enabled.</div>
-    </div>
-
-    <div class="risk-item" style="border-left-color: #f39c12; background: #fff9f0;">
-        <strong>Risk: Vendor Breach</strong>
-        <p>Third-party software vulnerability (e.g., Cloud storage leak).</p>
-        <div class="mitigation">Mitigation: Annual review of SOC2 Type II reports for all major vendors.</div>
-    </div>
+    <footer></footer>
 </body>
 </html>

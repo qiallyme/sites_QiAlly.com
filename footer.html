@@ -1,61 +1,76 @@
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-brand">
-        <div class="brand">
-          <img src="assets/imgs/logo.png" alt="QiAlly" class="logo">
-          <span class="wordmark">QiAlly</span>
+<footer class="bg-slate-50 border-t border-slate-200 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <!-- Brand -->
+            <div class="col-span-1 lg:col-span-1">
+                <a href="/" class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white font-bold text-lg">
+                        Q
+                    </div>
+                    <span class="font-serif text-xl font-bold text-slate-800">QiAlly</span>
+                </a>
+                <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                    Solo-practitioner consulting across tax resolution, accounting cleanup, and systems/AI.
+                    <br><br>Corporate-grade precision. Personal delivery.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://twitter.com/qiallyme" class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com/company/qially" class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-blue-700 hover:text-white transition" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h3 class="font-serif font-semibold text-slate-900 mb-6">Services</h3>
+                <ul class="space-y-3 text-sm text-slate-500">
+                    <li><a href="/modules/taxes/" class="hover:text-blue-600 transition">Tax & Accounting</a></li>
+                    <li><a href="/modules/taxes/individual/" class="hover:text-blue-600 transition">Individual Services</a></li>
+                    <li><a href="/modules/hr-ops/" class="hover:text-blue-600 transition">HR & Ops</a></li>
+                    <li><a href="/modules/it-ai/" class="hover:text-blue-600 transition">IT & AI Consulting</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div>
+                <h3 class="font-serif font-semibold text-slate-900 mb-6">Resources</h3>
+                <ul class="space-y-3 text-sm text-slate-500">
+                    <li><a href="/pages/portfolio/" class="hover:text-blue-600 transition">Portfolio</a></li>
+                    <li><a href="/pages/showcases/videos.html" class="hover:text-blue-600 transition">Video Library</a></li>
+                    <li><a href="/pages/compliance/" class="hover:text-blue-600 transition">Compliance Hub</a></li>
+                    <li><a href="/pages/compliance/wisp-core.html" class="hover:text-blue-600 transition">Security Plan (WISP)</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="font-serif font-semibold text-slate-900 mb-6">Contact</h3>
+                <ul class="space-y-3 text-sm text-slate-500">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-envelope mt-1 text-blue-500"></i>
+                        <a href="mailto:cody@qially.com" class="hover:text-blue-600 transition">cody@qially.com</a>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-phone mt-1 text-blue-500"></i>
+                        <a href="tel:+13176433489" class="hover:text-blue-600 transition">+1 (317) 643-3489</a>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot mt-1 text-blue-500"></i>
+                        <span>Indianapolis, IN<br>Serving Clients Virtually</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <p>
-          Solo-practitioner consulting across tax resolution, accounting cleanup, operations, and systems/AI—delivered with
-          corporate-grade precision and clear boundaries.
-        </p>
-        <div class="cta-row">
-          <a href="#contact" class="btn primary">Start a request</a>
-          <a href="/pages/portfolio/" class="btn outline" target="_blank" rel="noopener">View Portfolio</a>
+
+        <div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-xs text-slate-400">© 2026 QiAlly LLC. All rights reserved.</p>
+            <div class="flex gap-6 text-xs text-slate-400">
+                <a href="/privacy.html" class="hover:text-slate-600 transition">Privacy Policy</a>
+                <a href="/pages/msa/" class="hover:text-slate-600 transition">Terms of Service</a>
+            </div>
         </div>
-      </div>
-
-      <div class="footer-links">
-        <h3>Services</h3>
-        <ul>
-          <li><a href="/modules/taxes/">Tax & Accounting</a></li>
-          <li><a href="/modules/taxes/individual/">Individual Services</a></li>
-          <li><a href="/modules/hr-ops/">HR & Ops</a></li>
-          <li><a href="/modules/it-ai/">IT & AI Consulting</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h3>Work</h3>
-        <ul>
-          <li><a href="/pages/portfolio/" target="_blank" rel="noopener">Portfolio</a></li>
-          <li><a href="/pages/showcases/videos.html">Videos</a></li>
-          <li><a href="/modules/">Overview</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h3>Security</h3>
-        <ul>
-          <li><a href="/pages/compliance/index.html">Compliance Hub</a></li>
-          <li><a href="/pages/compliance/wisp-core.html">Security Plan (WISP)</a></li>
-          <li><a href="/pages/compliance/data-inventory.html">Data Privacy</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h3>Legal</h3>
-        <ul>
-          <li><a href="/pages/msa/">MSA / Terms</a></li>
-          <li><a href="/privacy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
     </div>
-
-    <div class="footer-bottom">
-      <span>© 2026 QiAlly. All rights reserved.</span>
-      <span>• Systems Whisperer. Built for clarity.</span>
-    </div>
-  </div>
 </footer>

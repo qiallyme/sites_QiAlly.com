@@ -1,74 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>We Need Your Feedback!</title>
-    <!-- Load Tailwind CSS -->
+    <title>Feedback | QiAlly</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] } } }
+        }
+    </script>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f9fc;
-        }
-        /* Custom button styling for a "fun and professional" look */
-        .review-button {
-            transition: all 0.2s ease-in-out;
-            /* Updated shadow color to match the emerald theme (#10b981 is Emerald 500) */
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4); 
-        }
-        .review-button:hover {
-            transform: translateY(-2px);
-            /* Updated hover shadow color */
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6); 
-        }
+        .blob-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; background: radial-gradient(circle at 15% 50%, rgba(219, 234, 254, 0.5), transparent 25%), radial-gradient(circle at 85% 30%, rgba(233, 213, 255, 0.5), transparent 25%); filter: blur(40px); }
+        .glass-card { background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.5); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4">
+<body class="bg-slate-50 text-slate-800 antialiased relative min-h-screen flex flex-col">
+    <div class="blob-bg"></div>
+    <nav></nav>
 
-    <!-- Primary accent color changed to emerald-500 -->
-    <div class="w-full max-w-lg bg-white p-8 md:p-12 rounded-2xl shadow-2xl text-center border-t-4 border-emerald-500">
-
-        <!-- Header and Main Call to Action -->
-        <div class="mb-8">
-            <!-- Icon color changed to emerald-500 -->
-            <svg class="mx-auto h-16 w-16 text-emerald-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.817 2.042a1 1 0 00-.363 1.118l1.07 3.292c.3.921-.755 1.688-1.538 1.118l-2.817-2.042a1 1 0 00-1.176 0l-2.817 2.042c-.783.57-1.838-.197-1.538-1.118l1.07-3.292a1 1 0 00-.363-1.118L2.202 8.72c-.783-.57-.381-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-4">Love Our Service?</h1>
-            <p class="mt-2 text-lg text-gray-600">Your feedback helps us grow and serve you better!</p>
-        </div>
-
-        <!-- Review Button Section (Main CTA) -->
-        <a href="https://g.page/r/CfDSLFE5hvq3EBM/review" target="_blank" rel="noopener noreferrer"
-           class="review-button inline-flex items-center justify-center w-full px-6 py-3 border border-transparent text-lg font-bold rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-500 focus:ring-opacity-50 tracking-wider transition">
-            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
-            Leave Your Review Now
-        </a>
-
-        <div class="mt-8">
-            <p class="text-sm font-semibold uppercase text-gray-500 mb-4 tracking-wider">— OR SCAN THE QR CODE BELOW —</p>
-
-            <!-- QR Code Section -->
-            <div class="inline-block p-4 bg-gray-50 rounded-xl shadow-inner">
-                <!-- Using Google Charts API to generate the QR code for the provided link -->
-                <img src="qrcode_www.google.com.png"
-                     alt="QR Code to Leave a Google Review"
-                     class="w-32 h-32 md:w-48 md:h-48 rounded-lg mx-auto"
-                     onerror="this.onerror=null;this.src='qrcode_www.google.com.png';" />
+    <main class="flex-grow flex items-center justify-center p-6 pt-32 pb-12">
+        <div class="glass-card p-8 md:p-12 rounded-2xl shadow-2xl text-center border-t-4 border-emerald-500 max-w-lg w-full">
+            
+            <div class="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-500 text-3xl mx-auto mb-6">
+                <i class="fa-solid fa-heart"></i>
             </div>
             
-            <p class="mt-4 text-sm text-gray-500 break-all p-2 bg-gray-100 rounded-lg inline-block">
-                <span class="font-medium text-gray-700">Link:</span> 
-                <!-- Link color changed to emerald-500 -->
-                <a href="https://g.page/r/CfDSLFE5hvq3EBM/review" target="_blank" rel="noopener noreferrer" class="text-emerald-500 hover:text-emerald-700">
-                    https://g.page/r/CfDSLFE5hvq3EBM/review
-                </a>
-            </p>
+            <h1 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-4">Love Our Service?</h1>
+            <p class="text-lg text-slate-600 mb-8">Your feedback helps us grow and serve you better!</p>
+
+            <a href="https://g.page/r/CfDSLFE5hvq3EBM/review" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center w-full px-8 py-4 bg-emerald-600 text-white font-bold rounded-full hover:bg-emerald-700 transition shadow-lg hover:shadow-emerald-500/30 transform hover:-translate-y-1">
+                <i class="fa-brands fa-google mr-2"></i> Leave a Review
+            </a>
+
+            <div class="mt-8 pt-8 border-t border-slate-100">
+                <p class="text-xs font-semibold uppercase text-slate-400 mb-4 tracking-wider">— OR SCAN QR CODE —</p>
+                
+                <div class="inline-block p-4 bg-white rounded-xl shadow-inner mb-4">
+                    <img src="qrcode_www.google.com.png" alt="QR Code" class="w-32 h-32 rounded-lg" onerror="this.style.display='none'">
+                </div>
+                
+                 <p class="text-xs text-slate-400">
+                    <a href="https://g.page/r/CfDSLFE5hvq3EBM/review" target="_blank" class="hover:text-emerald-600 underline">Direct Link</a>
+                </p>
+            </div>
         </div>
+    </main>
 
-    </div>
-
+    <footer></footer>
 </body>
 </html>

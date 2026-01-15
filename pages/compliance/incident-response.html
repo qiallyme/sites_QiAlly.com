@@ -1,14 +1,74 @@
-<section>
-    <h2>Data Breach & Incident Response Protocol</h2>
-    <ol>
-        <li><strong>Identification:</strong> Log the date, time, and nature of the suspected breach.</li>
-        <li><strong>Containment:</strong> Immediately rotate all passwords and revoke API keys for affected systems (e.g., Tax software, CRM).</li>
-        <li><strong>Notification:</strong> 
-            <ul>
-                <li>Notify the IRS Stakeholder Liaison within 24 hours.</li>
-                <li>Notify affected clients via secure email/portal notice.</li>
-                <li>Notify the FBI/IC3 if criminal activity is suspected.</li>
-            </ul>
-        </li>
-    </ol>
-</section>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Response | Compliance Hub</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] } } }
+        }
+    </script>
+    <style>
+        .blob-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; background: radial-gradient(circle at 15% 50%, rgba(219, 234, 254, 0.5), transparent 25%), radial-gradient(circle at 85% 30%, rgba(233, 213, 255, 0.5), transparent 25%); filter: blur(40px); }
+        .glass-card { background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.5); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased relative">
+    <div class="blob-bg"></div>
+    <nav></nav>
+
+    <div class="pt-32 pb-12 px-6 max-w-4xl mx-auto">
+        <a href="index.html" class="inline-flex items-center text-sm text-slate-500 hover:text-blue-600 mb-8 transition"><i class="fa-solid fa-arrow-left mr-2"></i> Back to Compliance Hub</a>
+        
+        <div class="glass-card p-8 md:p-12 rounded-2xl">
+            <h1 class="text-3xl font-serif text-slate-900 mb-8 text-center">Data Breach & Incident Response Protocol</h1>
+
+            <div class="space-y-8">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold">1</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Identification</h3>
+                        <p class="text-slate-600">Log the date, time, and nature of the suspected breach.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold">2</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Containment</h3>
+                        <p class="text-slate-600">Immediately rotate all passwords and revoke API keys for affected systems (e.g., Tax software, CRM).</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold">3</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Notification</h3>
+                        <div class="glass-card p-4 rounded-xl bg-white/50 mt-2">
+                            <ul class="space-y-3">
+                                <li class="flex items-center gap-2 text-slate-700 font-medium">
+                                    <i class="fa-solid fa-circle-exclamation text-amber-500"></i> Notify the IRS Stakeholder Liaison within 24 hours.
+                                </li>
+                                <li class="flex items-center gap-2 text-slate-600">
+                                    <i class="fa-regular fa-envelope"></i> Notify affected clients via secure email/portal notice.
+                                </li>
+                                <li class="flex items-center gap-2 text-slate-600">
+                                    <i class="fa-solid fa-gavel"></i> Notify the FBI/IC3 if criminal activity is suspected.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
+</body>
+</html>

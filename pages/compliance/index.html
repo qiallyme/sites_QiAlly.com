@@ -1,45 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <title>Qially LLC | Compliance Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance Hub | QiAlly</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'brand-bg': '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 40px auto; padding: 20px; }
-        h1 { border-bottom: 2px solid #2c3e50; padding-bottom: 10px; color: #2c3e50; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
-        .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; transition: 0.3s; }
-        .card:hover { border-color: #3498db; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .card h3 { margin-top: 0; color: #3498db; }
-        .tag { background: #e8f4fd; color: #3498db; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; }
+        .blob-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 15% 50%, rgba(219, 234, 254, 0.5), transparent 25%), 
+                radial-gradient(circle at 85% 30%, rgba(233, 213, 255, 0.5), transparent 25%);
+            filter: blur(40px);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Qially LLC Compliance Dashboard</h1>
-        <p>Federal Trade Commission 16 CFR Part 314 | IRS Publication 4557 & 5708</p>
+<body class="bg-slate-50 text-slate-800 antialiased relative">
+
+    <div class="blob-bg"></div>
+
+    <nav></nav>
+
+    <header class="pt-32 pb-12 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <span class="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-widest mb-4 border border-blue-100">Internal & Client Access</span>
+            <h1 class="text-4xl md:text-5xl font-serif text-slate-900 mb-4">Compliance Hub</h1>
+            <p class="text-lg text-slate-500 font-light max-w-2xl mx-auto">
+                Adherence to Federal Trade Commission 16 CFR Part 314, IRS Publication 4557 & 5708.
+            </p>
+        </div>
     </header>
 
-    <div class="grid">
-        <div class="card">
-            <h3>Information Security</h3>
-            <p>Core policies, WISP, and technical safeguards.</p>
-            <a href="wisp-core.html">View WISP</a> | <a href="risk-assessment.html">Risk Assessment</a>
+    <main class="max-w-7xl mx-auto px-6 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            
+            <!-- Information Security -->
+            <div class="glass-card p-8 rounded-2xl hover:shadow-xl transition duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 border border-emerald-100">
+                        <i class="fa-solid fa-shield-halved text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-medium text-slate-900">Information Security</h3>
+                </div>
+                <p class="text-slate-600 mb-6">Core policies, Written Information Security Plan (WISP), and technical safeguards.</p>
+                <div class="flex gap-4">
+                    <a href="wisp-core.html" class="flex items-center text-sm font-semibold text-emerald-700 hover:text-emerald-800 bg-emerald-50 px-4 py-2 rounded-lg hover:bg-emerald-100 transition">
+                        <i class="fa-solid fa-file-shield mr-2"></i> View WISP
+                    </a>
+                    <a href="risk-assessment.html" class="flex items-center text-sm font-semibold text-slate-600 hover:text-slate-900 bg-white border border-slate-200 px-4 py-2 rounded-lg hover:bg-slate-50 transition">
+                        Risk Assessment
+                    </a>
+                </div>
+            </div>
+
+            <!-- Data Governance -->
+            <div class="glass-card p-8 rounded-2xl hover:shadow-xl transition duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 border border-blue-100">
+                        <i class="fa-solid fa-database text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-medium text-slate-900">Data Governance</h3>
+                </div>
+                <p class="text-slate-600 mb-6">Tracking where PII lives, how it is handled, and protocols for response.</p>
+                <div class="flex gap-4">
+                    <a href="data-inventory.html" class="flex items-center text-sm font-semibold text-blue-700 hover:text-blue-800 bg-blue-50 px-4 py-2 rounded-lg hover:bg-blue-100 transition">
+                        <i class="fa-solid fa-table-list mr-2"></i> Data Inventory
+                    </a>
+                    <a href="incident-response.html" class="flex items-center text-sm font-semibold text-slate-600 hover:text-slate-900 bg-white border border-slate-200 px-4 py-2 rounded-lg hover:bg-slate-50 transition">
+                        Incident Plan
+                    </a>
+                </div>
+            </div>
+
+            <!-- Internal Logs -->
+            <div class="glass-card p-8 rounded-2xl hover:shadow-xl transition duration-300 relative overflow-hidden group">
+                <div class="absolute top-4 right-4 text-xs font-bold text-amber-600 bg-amber-50 px-2 py-1 rounded border border-amber-100 flex items-center gap-1">
+                    <i class="fa-solid fa-lock"></i> RESTRICTED
+                </div>
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-amber-600 border border-amber-100">
+                        <i class="fa-solid fa-clipboard-list text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-medium text-slate-900">Internal Logs</h3>
+                </div>
+                <p class="text-slate-600 mb-6">Access logs, training records, and system audits for compliance verification.</p>
+                <div>
+                    <a href="internal/training-logs/" class="flex w-fit items-center text-sm font-semibold text-amber-700 hover:text-amber-800 bg-amber-50 px-4 py-2 rounded-lg hover:bg-amber-100 transition">
+                        <i class="fa-solid fa-id-card mr-2"></i> Training Logs
+                    </a>
+                </div>
+            </div>
+
+            <!-- Legal & Vendor -->
+            <div class="glass-card p-8 rounded-2xl hover:shadow-xl transition duration-300 relative overflow-hidden">
+                <div class="absolute top-4 right-4 text-xs font-bold text-amber-600 bg-amber-50 px-2 py-1 rounded border border-amber-100 flex items-center gap-1">
+                    <i class="fa-solid fa-lock"></i> RESTRICTED
+                </div>
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 border border-purple-100">
+                        <i class="fa-solid fa-file-contract text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-medium text-slate-900">Legal & Vendor</h3>
+                </div>
+                <p class="text-slate-600 mb-6">Software provider agreements, BAAs, and SOC2 compliance reports.</p>
+                <div>
+                    <a href="internal/provider-agreements/" class="flex w-fit items-center text-sm font-semibold text-purple-700 hover:text-purple-800 bg-purple-50 px-4 py-2 rounded-lg hover:bg-purple-100 transition">
+                        <i class="fa-solid fa-handshake mr-2"></i> View Agreements
+                    </a>
+                </div>
+            </div>
+
         </div>
-        <div class="card">
-            <h3>Data Governance</h3>
-            <p>Tracking where PII lives and how it is handled.</p>
-            <a href="data-inventory.html">Data Inventory</a> | <a href="incident-response.html">Incident Plan</a>
-        </div>
-        <div class="card">
-            <h3>Internal Logs <span class="tag">Restricted</span></h3>
-            <p>Access logs, training records, and system audits.</p>
-            <a href="internal/training-logs.html">Training Logs</a>
-        </div>
-        <div class="card">
-            <h3>Legal & Vendor <span class="tag">Restricted</span></h3>
-            <p>Software provider agreements and SOC2 reports.</p>
-            <a href="internal/provider-agreements.html">Agreements</a>
-        </div>
-    </div>
+    </main>
+
+    <footer></footer>
 </body>
 </html>

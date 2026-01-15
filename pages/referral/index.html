@@ -1,191 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qially | Tools & Referrals ☁️</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Tools & Referrals | QiAlly</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] } } }
+        }
+    </script>
     <style>
-        :root {
-            --q-navy: #0F172A;
-            --q-blue: #38BDF8;
-            --q-cloud: #F0F9FF;
-            --white: #FFFFFF;
-            --jumbo: 45px;
-            --shadow: 0 20px 40px rgba(56, 189, 248, 0.12);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: var(--q-cloud); font-family: 'Plus Jakarta Sans', sans-serif; color: var(--q-navy); padding: 20px; line-height: 1.6; }
-        .wrapper { max-width: 500px; margin: 0 auto; }
-
-        header { padding: 30px 0; text-align: center; font-weight: 800; font-size: 28px; letter-spacing: -1.5px; }
-
-        /* Hero Section */
-        .jumbo-card {
-            background: var(--white);
-            border-radius: var(--jumbo);
-            padding: 45px 30px;
-            box-shadow: var(--shadow);
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .price-bubble {
-            background: var(--q-blue);
-            color: white;
-            display: inline-block;
-            padding: 20px 40px;
-            border-radius: 100px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
-        }
-        .price-val { font-size: 42px; font-weight: 800; line-height: 1; display: block; }
-        .price-lab { font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
-
-        h1 { font-size: 32px; font-weight: 800; letter-spacing: -1px; line-height: 1.2; margin-bottom: 15px; }
-        .subhead { color: #64748B; font-size: 16px; margin-bottom: 0; }
-
-        /* Referral Card Style */
-        .ref-card {
-            background: var(--white);
-            border-radius: var(--jumbo);
-            padding: 35px 25px;
-            box-shadow: var(--shadow);
-            margin-bottom: 25px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .ref-header { display: flex; align-items: center; margin-bottom: 15px; }
-        .ref-icon { font-size: 32px; margin-right: 15px; }
-        .ref-title { font-weight: 800; font-size: 22px; }
-
-        .tag {
-            background: var(--q-cloud);
-            color: var(--q-blue);
-            padding: 5px 12px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 700;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-
-        /* How it Works */
-        .step-pill {
-            background: #F8FAFC;
-            border-radius: 20px;
-            padding: 15px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .step-emoji { font-size: 20px; margin-right: 12px; }
-        .step-text b { display: block; font-size: 14px; color: var(--q-navy); }
-        .step-text span { font-size: 12px; color: #64748B; }
-
-        /* CTA */
-        .cta-btn {
-            background: var(--q-blue);
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: 20px;
-            border-radius: 100px;
-            font-weight: 800;
-            font-size: 16px;
-            text-align: center;
-            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
-            margin-top: 20px;
-            transition: transform 0.2s ease;
-        }
-        .cta-btn:active { transform: scale(0.98); }
-
-        .disclosure {
-            background: #F1F5F9;
-            border-radius: 25px;
-            padding: 20px;
-            font-size: 12px;
-            color: #64748B;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .legal { font-size: 11px; color: #94A3B8; text-align: center; padding: 20px; }
+        .blob-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; background: radial-gradient(circle at 15% 50%, rgba(219, 234, 254, 0.5), transparent 25%), radial-gradient(circle at 85% 30%, rgba(233, 213, 255, 0.5), transparent 25%); filter: blur(40px); }
+        .glass-card { background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.5); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 antialiased relative">
+    <div class="blob-bg"></div>
+    <nav></nav>
 
-<div class="wrapper">
-    <header>qially ☁️</header>
-
-    <div class="jumbo-card">
-        <div class="price-bubble">
-            <span class="price-val">Rewards</span>
-            <span class="price-lab">Partner Program 💸</span>
+    <div class="pt-32 pb-12 px-6">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <span class="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-widest mb-4 border border-blue-100">Partner Program</span>
+            <h1 class="text-4xl md:text-5xl font-serif text-slate-900 mb-6">Tools We Trust. Perks You Get.</h1>
+            <p class="text-xl text-slate-500 font-light max-w-2xl mx-auto">
+                We’ve partnered with the best in the business to give you exclusive discounts and sign-up bonuses.
+            </p>
         </div>
-        <h1>Tools We Trust.<br>Perks You Get. ✨</h1>
-        <p class="subhead">We’ve partnered with the best in the business to give you exclusive discounts and sign-up bonuses.</p>
+
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Cash App -->
+            <div class="glass-card p-8 rounded-2xl flex flex-col items-center text-center">
+                <div class="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 text-3xl mb-6">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Cash App</h3>
+                <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-full mb-4">INSTANT BONUS</span>
+                <p class="text-slate-600 text-sm mb-6">The easiest way to send, spend, and save. Get a cash bonus when you join and send your first $5.</p>
+                <div class="mt-auto w-full">
+                    <div class="bg-slate-50 rounded-lg p-3 mb-4 text-xs">
+                        <span class="block font-semibold text-slate-900">Download & Sign Up</span>
+                        <span class="text-slate-500">Use code: [YOURCODE]</span>
+                    </div>
+                    <a href="https://cash.app/app/YOURCODE" class="block w-full py-3 bg-slate-900 text-white rounded-full text-sm font-bold hover:bg-emerald-600 transition shadow-lg">Claim Bonus</a>
+                </div>
+            </div>
+
+            <!-- QuickBooks -->
+            <div class="glass-card p-8 rounded-2xl flex flex-col items-center text-center">
+                <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center text-green-600 text-3xl mb-6">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">QuickBooks</h3>
+                <span class="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-bold rounded-full mb-4">50% OFF - 6 MOS</span>
+                <p class="text-slate-600 text-sm mb-6">Manage your business accounting with ease. Qially clients get deep discounts on new subscriptions.</p>
+                <div class="mt-auto w-full">
+                     <div class="bg-slate-50 rounded-lg p-3 mb-4 text-xs">
+                        <span class="block font-semibold text-slate-900">Automate Bookkeeping</span>
+                        <span class="text-slate-500">Sync your bank accounts instantly.</span>
+                    </div>
+                    <a href="#" class="block w-full py-3 bg-slate-900 text-white rounded-full text-sm font-bold hover:bg-green-600 transition shadow-lg">Save 50%</a>
+                </div>
+            </div>
+
+            <!-- Zoho One -->
+            <div class="glass-card p-8 rounded-2xl flex flex-col items-center text-center">
+                <div class="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center text-yellow-600 text-3xl mb-6">
+                    <i class="fa-solid fa-cubes-stacked"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Zoho One</h3>
+                <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-bold rounded-full mb-4">$100 CREDIT</span>
+                <p class="text-slate-600 text-sm mb-6">The operating system for business. CRM, Books, and Projects—all in one place.</p>
+                 <div class="mt-auto w-full">
+                     <div class="bg-slate-50 rounded-lg p-3 mb-4 text-xs">
+                        <span class="block font-semibold text-slate-900">Scale Your Business</span>
+                        <span class="text-slate-500">Get $100 toward any Zoho app.</span>
+                    </div>
+                    <a href="#" class="block w-full py-3 bg-slate-900 text-white rounded-full text-sm font-bold hover:bg-yellow-600 transition shadow-lg">Get Credit</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-2xl mx-auto mt-16 text-center">
+            <div class="bg-slate-100 rounded-xl p-6 text-xs text-slate-500">
+                <strong>Affiliate Disclosure:</strong> Some links on this page are affiliate links. If you sign up using these links, Qially may receive a small commission at no extra cost to you. We only recommend tools we use and love.
+            </div>
+        </div>
     </div>
 
-    <div class="ref-card">
-        <div class="ref-header">
-            <span class="ref-icon">💰</span>
-            <span class="ref-title">Cash App</span>
-        </div>
-        <span class="tag">INSTANT BONUS</span>
-        <p style="font-size: 14px; color: #64748B; margin-bottom: 20px;">The easiest way to send, spend, and save. Get a cash bonus when you join and send your first $5.</p>
-        
-        <div class="step-pill">
-            <span class="step-emoji">📲</span>
-            <div class="step-text"><b>Download & Sign Up</b><span>Use code: [YOURCODE]</span></div>
-        </div>
-        
-        <a href="https://cash.app/app/YOURCODE" class="cta-btn">Claim Your Bonus 💸</a>
-    </div>
-
-    <div class="ref-card">
-        <div class="ref-header">
-            <span class="ref-icon">📊</span>
-            <span class="ref-title">QuickBooks</span>
-        </div>
-        <span class="tag">50% OFF FOR 6 MONTHS</span>
-        <p style="font-size: 14px; color: #64748B; margin-bottom: 20px;">Manage your business accounting with ease. Qially clients get deep discounts on new subscriptions.</p>
-        
-        <div class="step-pill">
-            <span class="step-emoji">🧾</span>
-            <div class="step-text"><b>Automate Bookkeeping</b><span>Sync your bank accounts instantly.</span></div>
-        </div>
-        
-        <a href="YOUR_QUICKBOOKS_LINK" class="cta-btn">Save 50% on QB 💎</a>
-    </div>
-
-    <div class="ref-card">
-        <div class="ref-header">
-            <span class="ref-icon">🛠️</span>
-            <span class="ref-title">Zoho One</span>
-        </div>
-        <span class="tag">$100 WALLET CREDIT</span>
-        <p style="font-size: 14px; color: #64748B; margin-bottom: 20px;">The operating system for business. CRM, Books, and Projects—all in one place.</p>
-        
-        <div class="step-pill">
-            <span class="step-emoji">🏗️</span>
-            <div class="step-text"><b>Scale Your Business</b><span>Get $100 toward any Zoho app.</span></div>
-        </div>
-        
-        <a href="YOUR_ZOHO_LINK" class="cta-btn">Get $100 Credit 🚀</a>
-    </div>
-
-    <div class="disclosure">
-        <b>Affiliate Disclosure:</b> Some links on this page are affiliate links. If you sign up using these links, Qially may receive a small commission at no extra cost to you. We only recommend tools we use and love.
-    </div>
-
-    <div class="legal">
-        &copy; 2026 Qially Financial. <br>
-        All promotions are subject to the terms and conditions of the respective providers.
-    </div>
-</div>
-
+    <footer></footer>
 </body>
 </html>
