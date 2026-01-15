@@ -1,8 +1,45 @@
-<h1>Qially LLC Compliance Dashboard</h1>
-<p>In accordance with 16 CFR Part 314 (FTC Safeguards Rule) and IRS Pub 4557.</p>
-<ul>
-    <li><a href="wisp-core.html">Written Information Security Plan (WISP)</a> - Core Policy</li>
-    <li><a href="data-inventory.html">Data Inventory & Mapping</a> - Location of PII/SPII</li>
-    <li><a href="incident-response.html">Incident Response Plan</a> - Breach Procedures</li>
-    <li><a href="risk-assessment.html">Annual Risk Assessment</a> - Last Updated: Jan 2026</li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Qially LLC | Compliance Hub</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 40px auto; padding: 20px; }
+        h1 { border-bottom: 2px solid #2c3e50; padding-bottom: 10px; color: #2c3e50; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+        .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; transition: 0.3s; }
+        .card:hover { border-color: #3498db; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .card h3 { margin-top: 0; color: #3498db; }
+        .tag { background: #e8f4fd; color: #3498db; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Qially LLC Compliance Dashboard</h1>
+        <p>Federal Trade Commission 16 CFR Part 314 | IRS Publication 4557 & 5708</p>
+    </header>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Information Security</h3>
+            <p>Core policies, WISP, and technical safeguards.</p>
+            <a href="wisp-core.html">View WISP</a> | <a href="risk-assessment.html">Risk Assessment</a>
+        </div>
+        <div class="card">
+            <h3>Data Governance</h3>
+            <p>Tracking where PII lives and how it is handled.</p>
+            <a href="data-inventory.html">Data Inventory</a> | <a href="incident-response.html">Incident Plan</a>
+        </div>
+        <div class="card">
+            <h3>Internal Logs <span class="tag">Restricted</span></h3>
+            <p>Access logs, training records, and system audits.</p>
+            <a href="internal/training-logs.html">Training Logs</a>
+        </div>
+        <div class="card">
+            <h3>Legal & Vendor <span class="tag">Restricted</span></h3>
+            <p>Software provider agreements and SOC2 reports.</p>
+            <a href="internal/provider-agreements.html">Agreements</a>
+        </div>
+    </div>
+</body>
+</html>
